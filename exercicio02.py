@@ -57,6 +57,10 @@ while active:
 
         if emprestimoFinal <= 100:
             raise ValueError("\nValor muito pequeno!")
+        
+        if not tipo in "Cc" or tipo in "Ss":
+            active = False
+            raise ValueError("Informação incorreta! - REINICIANDO!")
 
         if tipo in "Cc" :
             # juros composto
